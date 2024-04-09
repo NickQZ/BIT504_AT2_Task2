@@ -12,7 +12,8 @@ public class Board {
 	/** Constructor to create the game board */
 	public Board() {
 		
-	 //TODO: initialise the cells array using ROWS and COLS constants 
+	//Finished the Array with Rows and Col added into the new cell object
+	cells = new Cell[GameMain.ROWS][GameMain.COLS];
 
 		
 		for (int row = 0; row < GameMain.ROWS; ++row) {
@@ -25,14 +26,19 @@ public class Board {
 
 	 /** Return true if it is a draw (i.e., no more EMPTY cells) */ 
 	public boolean isDraw() {
-		 
-		// TODO: Check whether the game has ended in a draw. 
-		// Hint: Use a nested loop (see the constructor for an example). Check whether any of the cells content in the board grid are Player.Empty. If they are, it is not a draw.
-		// Hint: Return false if it is not a draw, return true if there are no empty positions left
-		   
 		
-
-		
+		// Game Checks if row and col are full
+		for (int row = 0; row < GameMain.ROWS; ++row) {
+			for (int col = 0; col < GameMain.COLS; ++col) {
+				// If cells (Row + Col) have an empty space then
+				if (cells[row][col].content == Player.Empty) {
+					// Game found an empty cell therefore the game is not a draw
+					return false;
+				}
+			}
+		}
+		// Else If all Cells are filled, game is a draw
+		return true;
 	}
 	
 	/** Return true if the current player "thePlayer" has won after making their move  */
