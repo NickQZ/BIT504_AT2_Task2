@@ -61,8 +61,9 @@ public class GameMain extends JPanel implements MouseListener{
 		setPreferredSize(new Dimension(CANVAS_WIDTH, CANVAS_HEIGHT + 30));
 		
 		
-		// TODO: Create a new instance of the game "Board"class. HINT check the variables above for the correct name
-
+		// Created a new instance of the game "Board"class. Now the code can run "initGame" inside the GameMain class but won't display rows yet due to the GameMain Panel not being created in main class.
+		board = new Board();
+		initGame();
 		
 		//TODO: call the method to initialise the game board
 
