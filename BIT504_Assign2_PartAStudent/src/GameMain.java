@@ -104,6 +104,7 @@ public class GameMain extends JPanel implements MouseListener{
 		});
 	} // Close Main Class
 	/** Custom painting codes on this JPanel */
+	
 	public void paintComponent(Graphics g) {
 		//fill background and set colour to white
 		super.paintComponent(g);
@@ -115,16 +116,17 @@ public class GameMain extends JPanel implements MouseListener{
 		if (currentState == GameState.Playing) {          
 			statusBar.setForeground(Color.BLACK);          
 			if (currentPlayer == Player.Cross) {   
-
-				//TODO: use the status bar to display the message "X"'s Turn
-
+				
+				// Now use the status bar to display the message "X"'s Turn
+				statusBar.setText("X's Turn");
 
 			} else {    
-
-				//TODO: use the status bar to display the message "O"'s Turn
-
-
-			}       
+				// If Player is Playing, StatusBar set foreground to Black but
+				// CurrentPlayer == Player.Nought Run Code Below and Display
+				// O's Turn
+				statusBar.setText("O's Turn");
+				}
+			       
 		} else if (currentState == GameState.Draw) {          
 			statusBar.setForeground(Color.RED);          
 			statusBar.setText("It's a Draw! Click to play again.");       
@@ -137,7 +139,7 @@ public class GameMain extends JPanel implements MouseListener{
 		}
 	}
 
-	/** Initialise the game-board contents and the current status of GameState and Player) */
+	/** Initialize the game-board contents and the current status of GameState and Player) */
 	public void initGame() {
 		for (int row = 0; row < ROWS; ++row) {          
 			for (int col = 0; col < COLS; ++col) {  
@@ -158,15 +160,22 @@ public class GameMain extends JPanel implements MouseListener{
 	public void updateGame(Player thePlayer, int row, int col) {
 		//check for win after play
 		if(board.hasWon(thePlayer, row, col)) {
+			
 
-			// TODO: check which player has won and update the currentstate to the appropriate gamestate for the winner
-
-
-		} else 
-			if (board.isDraw ()) {
-
-				// TODO: set the currentstate to the draw gamestate
-
+			// If the Player is playing Cross set Game State to Cross has won 
+			if (thePlayer == Player.Cross) {
+				currentState = GameState.Cross_won;
+				
+				// else set Game State to Nought has won
+			} else {
+				currentState = GameState.Nought_won;
+			}
+			
+			// Else if no Player has won set Game State to draw
+		} else if (board.isDraw ()) {
+			
+			currentState = GameState.Draw;
+			
 			}
 		//otherwise no change to current state of playing
 	}
