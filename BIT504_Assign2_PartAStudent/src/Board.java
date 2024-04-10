@@ -12,7 +12,7 @@ public class Board {
 	/** Constructor to create the game board */
 	public Board() { // Open Board
 		
-	//Finished the Array with Rows and Col added into the new cell object
+	// Finished the Array with Rows and Col added into the new cell object
 	cells = new Cell[GameMain.ROWS][GameMain.COLS];
 	
 	} // Close Board
@@ -65,7 +65,7 @@ public class Board {
 			return true;
 		}
 		
-		//no winner, keep playing
+		// No winner, keep playing
 		return false;
 	}
 	
@@ -74,7 +74,7 @@ public class Board {
 	 * Cells to paint themselves into the grid
 	 */
 	public void paint(Graphics g) {
-		//draw the grid
+		// Draw the grid
 		g.setColor(Color.gray);
 		for (int row = 1; row < GameMain.ROWS; ++row) {          
 			g.fillRoundRect(0, GameMain.CELL_SIZE * row - GRID_WIDHT_HALF,                
@@ -87,7 +87,7 @@ public class Board {
 					GRID_WIDTH, GRID_WIDTH);
 		}
 		
-		//Draw the cells
+		// Draw the cells
 		for (int row = 0; row < GameMain.ROWS; ++row) {          
 			for (int col = 0; col < GameMain.COLS; ++col) {  
 				cells[row][col].paint(g);
