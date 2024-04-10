@@ -10,18 +10,21 @@ public class Board {
 	Cell [][] cells;
 	
 	/** Constructor to create the game board */
-	public Board() {
+	public Board() { // Open Board
 		
 	//Finished the Array with Rows and Col added into the new cell object
 	cells = new Cell[GameMain.ROWS][GameMain.COLS];
-
-		
+	
+	} // Close Board
+	
+	public void initBoard() { // Open initBoard
 		for (int row = 0; row < GameMain.ROWS; ++row) {
 			for (int col = 0; col < GameMain.COLS; ++col) {
 				cells[row][col] = new Cell(row, col);
 			}
 		}
-	}
+	} // Close initBoard
+	
 	
 
 	 /** Return true if it is a draw (i.e., no more EMPTY cells) */ 

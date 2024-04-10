@@ -74,25 +74,20 @@ public class GameMain extends JPanel implements MouseListener{
         board = new Board();
 
 	    // Initialize the game board
-	    board();
-		
-		//TODO: call the method to initialise the game board
-
-
+	    board.initBoard();
 	}
 
 
-
-
-	public static void main(String[] args) {
+	public static void main(String[] args) { // Open Main Class
 		// Run GUI code in Event Dispatch thread for thread safety.
 		javax.swing.SwingUtilities.invokeLater(new Runnable() {
-			public void run() {
+			
+			public void run() { // Open Run 
 				//create a main window to contain the panel
 				JFrame frame = new JFrame(TITLE);
 
 				//TODO: create the new GameMain panel and add it to the frame
-
+				
 
 
 				//TODO: set the default close operation of the frame to exit_on_close
@@ -101,9 +96,10 @@ public class GameMain extends JPanel implements MouseListener{
 				frame.pack();             
 				frame.setLocationRelativeTo(null);
 				frame.setVisible(true);
-			}
+				
+			} // Close Run
 		});
-	}
+	} // Close Main Class
 	/** Custom painting codes on this JPanel */
 	public void paintComponent(Graphics g) {
 		//fill background and set colour to white
@@ -137,7 +133,6 @@ public class GameMain extends JPanel implements MouseListener{
 			statusBar.setText("'O' Won! Click to play again.");       
 		}
 	}
-
 
 	/** Initialise the game-board contents and the current status of GameState and Player) */
 	public void initGame() {
