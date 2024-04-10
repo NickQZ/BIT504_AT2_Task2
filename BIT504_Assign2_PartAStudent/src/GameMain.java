@@ -38,14 +38,7 @@ public class GameMain extends JPanel implements MouseListener{
 	public GameMain() {   
 
 		// Added a mouse listener to JPanel        
-		addMouseListener(new MouseAdapter(){
-			@Override
-			public void mouseClicked(MouseEvent e) { // Holds Mouse click events
-
-			}
-		});
-
-
+		addMouseListener(this);
 
 		// Setup the status bar (JLabel) to display status message       
 		statusBar = new JLabel("         ");       
