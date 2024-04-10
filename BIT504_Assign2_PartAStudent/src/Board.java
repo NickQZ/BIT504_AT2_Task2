@@ -22,7 +22,7 @@ public class Board {
 			}
 		}
 	}
-	
+	test
 
 	 /** Return true if it is a draw (i.e., no more EMPTY cells) */ 
 	public boolean isDraw() {
