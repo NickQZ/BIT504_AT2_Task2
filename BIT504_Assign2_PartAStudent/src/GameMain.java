@@ -92,7 +92,7 @@ public class GameMain extends JPanel implements MouseListener{
 	public void paintComponent(Graphics g) {
 		// Fill background and set colour to white
 		super.paintComponent(g);
-		setBackground(Color.WHITE);
+		setBackground(Color.BLACK);
 		// Ask the game board to paint itself
 		board.paint(g);
 
@@ -142,7 +142,7 @@ public class GameMain extends JPanel implements MouseListener{
 	 *   
 	 */
 	public void updateGame(Player thePlayer, int row, int col) {
-		//check for win after play
+		// If board.hasWon 
 		if(board.hasWon(thePlayer, row, col)) {
 
 
