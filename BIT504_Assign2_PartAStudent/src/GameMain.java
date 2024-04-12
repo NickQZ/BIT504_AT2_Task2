@@ -91,16 +91,16 @@ public class GameMain extends JPanel implements MouseListener{ // Open GameMain
 	public void paintComponent(Graphics g) { // Open Paint Component
 		// Fill background and set colour to white
 		super.paintComponent(g);
-		// Set Background JFrame to Black
-		setBackground(Color.BLACK);
+		// Set Background JFrame to White
+		setBackground(Color.WHITE);
 		// Ask the game board to paint itself
 		board.paint(g);
 
 		// Set status bar message
 		// If Game state is equal to Playing,
 		if (currentState == GameState.Playing) {
-			// Set foreground to Black
-			statusBar.setForeground(Color.BLACK); 
+			// Set foreground to White
+			statusBar.setForeground(Color.WHITE); 
 			// If Current Player equals Cross
 			if (currentPlayer == Player.Cross) {   
 				

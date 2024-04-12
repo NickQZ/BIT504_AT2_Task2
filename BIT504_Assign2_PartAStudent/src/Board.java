@@ -94,7 +94,7 @@ public class Board { // Open Board
 	 */
 	public void paint(Graphics g) { // Open Paint
 		// Draw the grid
-		g.setColor(Color.WHITE);
+		g.setColor(Color.BLACK);
 		for (int row = 1; row < GameMain.ROWS; ++row) {          
 			g.fillRoundRect(0, GameMain.CELL_SIZE * row - GRID_WIDHT_HALF,                
 					GameMain.CANVAS_WIDTH - 1, GRID_WIDTH,                
