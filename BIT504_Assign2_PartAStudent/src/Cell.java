@@ -3,27 +3,25 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
-public class Cell {
+public class Cell { // Open Cell
 	// Content of this cell (empty, cross, nought)
 	Player content;
 	// Row and column of this cell
 	int row, col;
 
 	/** Constructor to initialise this cell with the specified row and col */
-	public Cell(int row, int col) {
+	public Cell(int row, int col) { // Open Cell
 		
 		// The variables row and col, are assigned to the cell object with the values above.
-		
 		this.row = row;
 		this.col = col;
 		
 		// Sets the cell content to EMPTY
 		clear();
-	}
-
+	} // Close Cell
 
 	/** Paint itself on the graphics canvas, given the Graphics context g */ 
-	public void paint(Graphics g) {
+	public void paint(Graphics g) { // Open Paint
 		// Graphics2D allows setting of pen's stroke size
 		Graphics2D graphic2D = (Graphics2D) g;
 		graphic2D.setStroke(new BasicStroke(GameMain.SYMBOL_STROKE_WIDTH, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
@@ -41,14 +39,14 @@ public class Cell {
 			graphic2D.setColor(Color.BLUE);
 			graphic2D.drawOval(x1, y1, GameMain.SYMBOL_SIZE, GameMain.SYMBOL_SIZE);
 		}
-	}
+	} // Close Paint
 
 	/** Set this cell's content to EMPTY */
-	public void clear() {
+	public void clear() { // Open Clear
 
 		// Set content inside Clear cell to Empty, this means that the cell is ready to be played.
 		content = Player.Empty;
 		
-	}
+	} // Close Clear
 
-}
+} // Close Cell

@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class Board {
+public class Board { // Open Board
 	// Grid line width
 	public static final int GRID_WIDTH = 8;
 	// Grid line half width
@@ -28,7 +28,7 @@ public class Board {
 	
 
 	 /** Return true if it is a draw (i.e., no more EMPTY cells) */ 
-	public boolean isDraw() {
+	public boolean isDraw() { // Open isDraw
 		
 		// Game Checks if row and col are full
 		for (int row = 0; row < GameMain.ROWS; ++row) {
@@ -42,10 +42,10 @@ public class Board {
 		}
 		// Else If all Cells are filled, game is a draw
 		return true;
-	}
+	} // Close  isDraw
 	
 	/** Return true if the current player "thePlayer" has won after making their move  */
-	public boolean hasWon(Player thePlayer, int playerRow, int playerCol) {
+	public boolean hasWon(Player thePlayer, int playerRow, int playerCol) { // Open hasWon
 		
 		   /** Checks to see if Player has 3-in-that-row (left to right)*/
 	
@@ -85,13 +85,14 @@ public class Board {
 
 	    // No winner, keep playing
 	    return false;
-	}
+	    
+	} // Close hasWon
 	
 	/**
 	 * Draws the grid (rows then columns) using constant sizes, then call on the
 	 * Cells to paint themselves into the grid
 	 */
-	public void paint(Graphics g) {
+	public void paint(Graphics g) { // Open Paint
 		// Draw the grid
 		g.setColor(Color.WHITE);
 		for (int row = 1; row < GameMain.ROWS; ++row) {          
@@ -111,7 +112,7 @@ public class Board {
 				cells[row][col].paint(g);
 			}
 		}
-	}
+	} // Close Paint
 	
 
-}
+} // Close Board
