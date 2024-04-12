@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class GameMain extends JPanel implements MouseListener{
 	// Constants for game 
-	// number of ROWS by COLS cell constants 
+	// Number of ROWS by COLS cell constants 
 	public static final int ROWS = 3;     
 	public static final int COLS = 3;  
 	public static final String TITLE = "Tic Tac Toe";
@@ -21,16 +21,16 @@ public class GameMain extends JPanel implements MouseListener{
 	public static final int SYMBOL_STROKE_WIDTH = 8;
 
 	/*declare game object variables*/
-	// the game board 
+	// The game board 
 	private Board board;
 
 	// Created enumeration for the variable Game State.
 	// This Included; Playing, Draw, Cross_won, Nought_won
 	private GameState currentState; 
 
-	// the current player
+	// The current player
 	private Player currentPlayer; 
-	// for displaying game status message
+	// For displaying game status message
 	private JLabel statusBar;       
 
 
@@ -47,7 +47,7 @@ public class GameMain extends JPanel implements MouseListener{
 		statusBar.setOpaque(true);       
 		statusBar.setBackground(Color.LIGHT_GRAY);  
 
-		// layout of the panel is in border layout
+		// Layout of the panel is in border layout
 		setLayout(new BorderLayout());       
 		add(statusBar, BorderLayout.SOUTH);
 		// account for statusBar height in overall height

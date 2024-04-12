@@ -13,7 +13,7 @@ public class Cell {
 	public Cell(int row, int col) {
 		
 		// The variables row and col, are assigned to the cell object with the values above.
-		// 
+		
 		this.row = row;
 		this.col = col;
 		
@@ -37,7 +37,7 @@ public class Cell {
 			int y2 = (row + 1) * GameMain.CELL_SIZE - GameMain.CELL_PADDING;
 			graphic2D.drawLine(x1, y1, x2, y2);
 			graphic2D.drawLine(x2, y1, x1, y2);
-		}else if (content == Player.Nought) {
+		} else if (content == Player.Nought) {
 			graphic2D.setColor(Color.BLUE);
 			graphic2D.drawOval(x1, y1, GameMain.SYMBOL_SIZE, GameMain.SYMBOL_SIZE);
 		}

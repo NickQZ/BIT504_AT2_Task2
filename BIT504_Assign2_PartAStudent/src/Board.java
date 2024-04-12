@@ -1,12 +1,12 @@
 import java.awt.*;
 
 public class Board {
-	// grid line width
+	// Grid line width
 	public static final int GRID_WIDTH = 8;
-	// grid line half width
+	// Grid line half width
 	public static final int GRID_WIDHT_HALF = GRID_WIDTH / 2;
 	
-	//2D array of ROWS-by-COLS Cell instances
+	// 2D array of ROWS-by-COLS Cell instances
 	Cell [][] cells;
 	
 	/** Constructor to create the game board */
